@@ -6,12 +6,14 @@
 import os
 
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 from backend import database
 
 
 def create_app(test_config=None):
     app = Flask(__name__)
+    CORS(app)
 
     app.config["DATABASE"] = os.environ.get(
         "DATABASE_PATH", str(database.DEFAULT_DB_PATH)
