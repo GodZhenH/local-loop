@@ -48,7 +48,7 @@ export default function CreateListing({ onCreate }) {
             </div>
             <h2>Item Published!</h2>
             <p>Thank you for contributing to your community.</p>
-            <div className="score-points-display">+50 Green Points</div>
+            <div className="score-points-display">Your item has been published! Green Points are awarded after a completed exchange.</div>
             <button
               className="button primary full"
               type="button"

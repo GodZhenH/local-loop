@@ -44,7 +44,7 @@ export default function BrowseItems({ items, onClaim }) {
             </div>
             <h2>Item Claimed!</h2>
             <p>You have reserved <strong>{claimedItem.title}</strong>.</p>
-            <div className="score-points-display">+20 Green Points</div>
+            <div className="score-points-display">Item reserved! Contact the owner to arrange handover.</div>
             <button
               className="button primary full"
               onClick={() => setClaimedItem(null)}
