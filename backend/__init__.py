@@ -1,5 +1,10 @@
 """Local Loop backend - Flask application factory (Puvanan)."""
 
+
+"""Local Loop backend - Flask application factory (Puvanan)."""
+
+import os
+
 from flask import Flask, jsonify
 
 from backend import database
@@ -7,7 +12,11 @@ from backend import database
 
 def create_app(test_config=None):
     app = Flask(__name__)
-    app.config["DATABASE"] = str(database.DEFAULT_DB_PATH)
+
+    app.config["DATABASE"] = os.environ.get(
+        "DATABASE_PATH", str(database.DEFAULT_DB_PATH)
+    )
+
     if test_config:
         app.config.update(test_config)
 
